@@ -1,0 +1,59 @@
+﻿using System;
+
+namespace SmartBudget
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] beschreibungen = new string[5];
+            decimal[] beträge = new decimal[5];
+            int anzahl = 0;
+
+            bool läuft = true;
+
+            while (läuft)
+            {
+                Console.WriteLine("1. Eintrag hinzufügen");
+                Console.WriteLine("2. Einträge anzeigen");
+                Console.WriteLine("3. Beenden");
+                string wahl = Console.ReadLine();
+
+                if (wahl == "1")
+                {
+                    if (anzahl < 5)
+                    {
+                        Console.Write("Beschreibung: ");
+                        beschreibungen[anzahl] = Console.ReadLine();
+
+                        Console.Write("Betrag: ");
+                        beträge[anzahl] = Convert.ToDecimal(Console.ReadLine());
+                        
+
+
+
+                        anzahl++;
+                        Console.WriteLine("Gespeichert!\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Liste ist voll!\n");
+                    }
+                }
+                else if (wahl == "2")
+                {
+                    Console.WriteLine("\n--- Deine Liste ---");
+                    for (int i = 0; i < anzahl; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {beschreibungen[i]} : {beträge[i]} CHF");
+                    }
+                    Console.WriteLine();
+                }
+                else if (wahl == "3")
+                {
+                    läuft = false;
+                }
+            }
+        }
+    }
+}
