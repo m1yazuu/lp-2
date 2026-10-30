@@ -30,7 +30,7 @@ Filter: Man kann sich jetzt gezielt nur die Einträge anzeigen lassen, die über
 
 - [x] Ich baue eine Filterfunktion ein, damit man nur Ausgaben über einem bestimmten Betrag oder in einer bestimmten Kategorie anzeigen lassen kann.
 
-- [x] Ich teste mein gesamtes Programm mit verschiedenen Testdaten, korrigiere eventuelle Fehler und dokumentiere den aktuellen Stand.
+- [x] Ich teste mein gesamtes Programm mit verschiedenen Testdaten, korrigiere eventuelle Fehler.
       
 ## 6.11.26
 - [ ] Ich baue eine einfache Suchfunktion ein, mit der man nach einem bestimmten Namen/Text im Array suchen kann.
