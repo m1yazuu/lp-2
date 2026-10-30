@@ -16,10 +16,10 @@ Heute habe ich meine Planung aufgegeben weil ich erfuhr das mein Projekt so wie 
 
 ## 30.10.26
 
-- [ ]Ich erweitere den Code so, dass Benutzereingaben mit try-catch oder decimal.TryParse abgefangen werden, falls man aus Versehen Buchstaben statt Zahlen eingibt.
+- [ ] Ich erweitere den Code so, dass Benutzereingaben mit try-catch oder decimal.TryParse abgefangen werden, falls man aus Versehen Buchstaben statt Zahlen eingibt.
 
-- [ ]Ich füge eine Funktion hinzu, mit der man alle bisherigen Einträge über ein Untermenü wieder komplett löschen oder zurücksetzen kann.
+- [ ] Ich füge eine Funktion hinzu, mit der man alle bisherigen Einträge über ein Untermenü wieder komplett löschen oder zurücksetzen kann.
 
-- [ ]Ich baue eine Filterfunktion ein, damit man nur Ausgaben über einem bestimmten Betrag oder in einer bestimmten Kategorie anzeigen lassen kann.
+- [ ] Ich baue eine Filterfunktion ein, damit man nur Ausgaben über einem bestimmten Betrag oder in einer bestimmten Kategorie anzeigen lassen kann.
 
-- [ ]Ich teste mein gesamtes Programm mit verschiedenen Testdaten, korrigiere eventuelle Fehler und dokumentiere den aktuellen Stand.
+- [ ] Ich teste mein gesamtes Programm mit verschiedenen Testdaten, korrigiere eventuelle Fehler und dokumentiere den aktuellen Stand.
