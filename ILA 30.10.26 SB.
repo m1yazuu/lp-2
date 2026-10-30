@@ -1,0 +1,89 @@
+using System;
+
+string[] beschreibungen = new string[5];
+decimal[] beträge = new decimal[5];
+int anzahl = 0;
+
+bool läuft = true;
+
+while (läuft)
+{
+    Console.WriteLine("1. Eintrag hinzufügen");
+    Console.WriteLine("2. Einträge anzeigen & Summe");
+    Console.WriteLine("3. Liste zurücksetzen (Löschen)");
+    Console.WriteLine("4. Nur Beträge über 10 CHF anzeigen (Filter)");
+    Console.WriteLine("5. Beenden");
+    Console.Write("Wähle eine Option: ");
+    string wahl = Console.ReadLine();
+
+    if (wahl == "1")
+    {
+        if (anzahl < 5)
+        {
+            Console.Write("Beschreibung: ");
+            beschreibungen[anzahl] = Console.ReadLine();
+
+            Console.Write("Betrag: ");
+            string eingabe = Console.ReadLine();
+
+            // Abfangen von ungültigen Eingaben mit TryParse
+            bool istZahl = decimal.TryParse(eingabe, out decimal betrag);
+
+            if (istZahl)
+            {
+                beträge[anzahl] = betrag;
+                anzahl++;
+                Console.WriteLine("Erfolgreich gespeichert!\n");
+            }
+            else
+            {
+                Console.WriteLine("Fehler: Das war keine gültige Zahl!\n");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Liste ist voll!\n");
+        }
+    }
+    else if (wahl == "2")
+    {
+        Console.WriteLine("\n--- Deine Liste ---");
+        decimal gesamtsumme = 0;
+
+        for (int i = 0; i < anzahl; i++)
+        {
+            Console.WriteLine($"{i + 1}. {beschreibungen[i]} : {beträge[i]} CHF");
+            gesamtsumme += beträge[i];
+        }
+
+        Console.WriteLine($"Gesamtsumme: {gesamtsumme} CHF\n");
+    }
+    else if (wahl == "3")
+    {
+        // Alle Einträge löschen / zurücksetzen
+        anzahl = 0;
+        Console.WriteLine("Alle Einträge wurden gelöscht!\n");
+    }
+    else if (wahl == "4")
+    {
+        // Einfacher Filter für Beträge über 10 CHF
+        Console.WriteLine("\n--- Einträge über 10 CHF ---");
+        for (int i = 0; i < anzahl; i++)
+        {
+            if (beträge[i] > 10)
+            {
+                Console.WriteLine($"{beschreibungen[i]} : {beträge[i]} CHF");
+            }
+        }
+        Console.WriteLine();
+    }
+    else if (wahl == "5")
+    {
+        // Programm beenden
+        läuft = false;
+    }
+    else
+    {
+        Console.WriteLine("Ungültige Auswahl, bitte versuche es noch einmal.\n");
+    }
+}
