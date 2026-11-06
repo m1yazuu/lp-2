@@ -52,12 +52,12 @@ Ich habe zwei kleine Fehler behoben: Die Beschreibung wurde schon gespeichert, a
 
 ## 13.11.26
 
-- [ ]Ich baue eine Funktion ein, mit der man einen einzelnen Eintrag löschen kann. Man gibt die Nummer ein und die Einträge danach rutschen im Array nach vorne.
+- [ ] Ich baue eine Funktion ein, mit der man einen einzelnen Eintrag löschen kann. Man gibt die Nummer ein und die Einträge danach rutschen im Array nach vorne.
   
-- [ ]Ich berechne den Durchschnitt von allen Beträgen und zeige ihn mit der Anzahl der Einträge an.
+- [ ] Ich berechne den Durchschnitt von allen Beträgen und zeige ihn mit der Anzahl der Einträge an.
   
-- [ ]Ich lasse den Benutzer die Budget-Grenze selbst eingeben und schreibe sie nicht mehr fest auf 100 CHF in den Code.
+- [ ] Ich lasse den Benutzer die Budget-Grenze selbst eingeben und schreibe sie nicht mehr fest auf 100 CHF in den Code.
   
-- [ ]Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
+- [ ] Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
   
-- [ ]Ich teste die neuen Sachen mit verschiedenen Testfällen (z. B. eine Nummer, die es nicht gibt, oder den Durchschnitt bei einer leeren Liste) und behebe kleine Fehler.
+- [ ] Ich teste die neuen Sachen mit verschiedenen Testfällen (z. B. eine Nummer, die es nicht gibt, oder den Durchschnitt bei einer leeren Liste) und behebe kleine Fehler.
