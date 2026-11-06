@@ -1,0 +1,174 @@
+using System;
+
+string[] beschreibungen = new string[5];
+decimal[] beträge = new decimal[5];
+int anzahl = 0;
+
+// ab dieser Summe an Ausgaben kommt die Warnung
+decimal budgetGrenze = 100;
+
+bool läuft = true;
+
+while (läuft)
+{
+    Console.WriteLine("1. Eintrag hinzufügen");
+    Console.WriteLine("2. Einträge anzeigen & Summe");
+    Console.WriteLine("3. Liste zurücksetzen (Löschen)");
+    Console.WriteLine("4. Nur Beträge über 10 CHF anzeigen (Filter)");
+    Console.WriteLine("5. Nach Text suchen");
+    Console.WriteLine("6. Höchsten und niedrigsten Betrag anzeigen");
+    Console.WriteLine("7. Beenden");
+    Console.Write("Wähle eine Option: ");
+    string wahl = Console.ReadLine();
+
+    if (wahl == "1")
+    {
+        if (anzahl < 5)
+        {
+            Console.Write("Beschreibung: ");
+            string beschreibung = Console.ReadLine();
+
+            Console.Write("Betrag (Minus = Ausgabe, Plus = Einnahme): ");
+            string eingabe = Console.ReadLine();
+
+            // schauen ob es wirklich eine Zahl ist
+            bool istZahl = decimal.TryParse(eingabe, out decimal betrag);
+
+            if (istZahl)
+            {
+                // erst jetzt speichern, sonst steht die Beschreibung schon drin obwohl der Betrag falsch war
+                beschreibungen[anzahl] = beschreibung;
+                beträge[anzahl] = betrag;
+                anzahl++;
+                Console.WriteLine("Erfolgreich gespeichert!\n");
+            }
+            else
+            {
+                Console.WriteLine("Fehler: Das war keine gültige Zahl!\n");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Liste ist voll!\n");
+        }
+    }
+    else if (wahl == "2")
+    {
+        Console.WriteLine("\n--- Deine Liste ---");
+        decimal gesamtsumme = 0;
+        decimal summeEinnahmen = 0;
+        decimal summeAusgaben = 0;
+
+        for (int i = 0; i < anzahl; i++)
+        {
+            string art;
+
+            // wenn der Betrag kleiner als 0 ist, ist es eine Ausgabe
+            if (beträge[i] < 0)
+            {
+                art = "Ausgabe";
+                summeAusgaben = summeAusgaben + (beträge[i] * -1); // mal -1 damit die Zahl positiv wird
+            }
+            else
+            {
+                art = "Einnahme";
+                summeEinnahmen += beträge[i];
+            }
+
+            Console.WriteLine($"{i + 1}. [{art}] {beschreibungen[i]} : {beträge[i]} CHF");
+            gesamtsumme += beträge[i];
+        }
+
+        Console.WriteLine($"\nEinnahmen: {summeEinnahmen} CHF");
+        Console.WriteLine($"Ausgaben: {summeAusgaben} CHF");
+        Console.WriteLine($"Gesamtsumme: {gesamtsumme} CHF");
+
+        // Budget Warnung
+        if (summeAusgaben > budgetGrenze)
+        {
+            Console.WriteLine($"ACHTUNG: Du hast {summeAusgaben} CHF ausgegeben, das ist mehr als dein Budget von {budgetGrenze} CHF!");
+        }
+        Console.WriteLine();
+    }
+    else if (wahl == "3")
+    {
+        // Alle Einträge löschen / zurücksetzen
+        anzahl = 0;
+        Console.WriteLine("Alle Einträge wurden gelöscht!\n");
+    }
+    else if (wahl == "4")
+    {
+        // Einfacher Filter für Beträge über 10 CHF
+        Console.WriteLine("\n--- Einträge über 10 CHF ---");
+        for (int i = 0; i < anzahl; i++)
+        {
+            if (beträge[i] > 10)
+            {
+                Console.WriteLine($"{beschreibungen[i]} : {beträge[i]} CHF");
+            }
+        }
+        Console.WriteLine();
+    }
+    else if (wahl == "5")
+    {
+        Console.Write("Wonach suchst du? ");
+        // alles klein machen, damit Gross- und Kleinschreibung egal ist
+        string suchtext = Console.ReadLine().ToLower();
+
+        bool gefunden = false;
+        Console.WriteLine("\n--- Suchergebnisse ---");
+
+        for (int i = 0; i < anzahl; i++)
+        {
+            // Contains schaut ob der Suchtext irgendwo in der Beschreibung vorkommt
+            if (beschreibungen[i].ToLower().Contains(suchtext))
+            {
+                Console.WriteLine($"{i + 1}. {beschreibungen[i]} : {beträge[i]} CHF");
+                gefunden = true;
+            }
+        }
+
+        if (gefunden == false)
+        {
+            Console.WriteLine("Nichts gefunden.");
+        }
+        Console.WriteLine();
+    }
+    else if (wahl == "6")
+    {
+        if (anzahl == 0)
+        {
+            Console.WriteLine("Die Liste ist leer!\n");
+        }
+        else
+        {
+            // ich fange beim ersten Eintrag an und vergleiche dann mit den anderen
+            int indexMax = 0;
+            int indexMin = 0;
+
+            for (int i = 1; i < anzahl; i++)
+            {
+                if (beträge[i] > beträge[indexMax])
+                {
+                    indexMax = i;
+                }
+                if (beträge[i] < beträge[indexMin])
+                {
+                    indexMin = i;
+                }
+            }
+
+            Console.WriteLine($"\nHöchster Betrag: {beträge[indexMax]} CHF ({beschreibungen[indexMax]})");
+            Console.WriteLine($"Niedrigster Betrag: {beträge[indexMin]} CHF ({beschreibungen[indexMin]})\n");
+        }
+    }
+    else if (wahl == "7")
+    {
+        // Programm beenden
+        läuft = false;
+    }
+    else
+    {
+        Console.WriteLine("Ungültige Auswahl, bitte versuche es noch einmal.\n");
+    }
+}
