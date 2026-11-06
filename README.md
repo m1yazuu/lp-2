@@ -33,12 +33,31 @@ Filter: Man kann sich jetzt gezielt nur die Einträge anzeigen lassen, die über
 - [x] Ich teste mein gesamtes Programm mit verschiedenen Testdaten, korrigiere eventuelle Fehler.
       
 ## 6.11.26
-- [ ] Ich baue eine einfache Suchfunktion ein, mit der man nach einem bestimmten Namen/Text im Array suchen kann.
 
-- [ ] Ich füge eine Unterscheidung zwischen Einnahmen und Ausgaben hinzu (z. B. negative Beträge als Ausgaben kennzeichnen).
+ch habe mein Budget-Programm erweitert. Man kann jetzt nach einem Text suchen (Option 5) und das Programm zeigt an, ob ein Eintrag eine Einnahme oder eine Ausgabe ist. Negative Beträge zähle ich als Ausgaben.
+Ich habe eine Warnung eingebaut. Wenn man mehr als 100 CHF ausgegeben hat, kommt eine Meldung.
+Man kann sich auch den höchsten und den niedrigsten Betrag anzeigen lassen (Option 6). Dafür habe ich eine Schleife gemacht, die alle Beträge vergleicht.
+Das Menü habe ich angepasst, “Beenden” ist jetzt die 7.
+Ich habe zwei kleine Fehler behoben: Die Beschreibung wurde schon gespeichert, auch wenn der Betrag falsch war. Und bei Option 6 ist das Programm bei einer leeren Liste abgestürzt, deshalb prüfe ich jetzt vorher, ob überhaupt etwas drin ist.
 
-- [ ] Ich erstelle eine Budget-Warnung, die dem Benutzer eine Meldung anzeigt, wenn die Gesamtsumme eine bestimmte Grenze (z. B. 100 CHF) überschreitet.
+- [x] Ich baue eine einfache Suchfunktion ein, mit der man nach einem bestimmten Namen/Text im Array suchen kann.
 
-- [ ] Ich baue eine Funktion ein, die den höchsten und den niedrigsten Betrag in der Liste findet und ausgibt.
+- [x] Ich füge eine Unterscheidung zwischen Einnahmen und Ausgaben hinzu (z. B. negative Beträge als Ausgaben kennzeichnen).
 
-- [ ] Ich teste den gesamten Code mit verschiedenen Testfällen, behebe kleine Fehler und aktualisiere meine Dokumentation.
+- [x] Ich erstelle eine Budget-Warnung, die dem Benutzer eine Meldung anzeigt, wenn die Gesamtsumme eine bestimmte Grenze (z. B. 100 CHF) überschreitet.
+
+- [x] Ich baue eine Funktion ein, die den höchsten und den niedrigsten Betrag in der Liste findet und ausgibt.
+
+- [x] Ich teste den gesamten Code mit verschiedenen Testfällen, behebe kleine Fehler und aktualisiere meine Dokumentation.
+
+## 13.11.26
+
+- [ ]Ich baue eine Funktion ein, mit der man einen einzelnen Eintrag löschen kann. Man gibt die Nummer ein und die Einträge danach rutschen im Array nach vorne.
+  
+- [ ]Ich berechne den Durchschnitt von allen Beträgen und zeige ihn mit der Anzahl der Einträge an.
+  
+- [ ]Ich lasse den Benutzer die Budget-Grenze selbst eingeben und schreibe sie nicht mehr fest auf 100 CHF in den Code.
+  
+- [ ]Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
+  
+- [ ]Ich teste die neuen Sachen mit verschiedenen Testfällen (z. B. eine Nummer, die es nicht gibt, oder den Durchschnitt bei einer leeren Liste) und behebe kleine Fehler.
