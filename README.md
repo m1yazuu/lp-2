@@ -52,6 +52,8 @@ Ich habe zwei kleine Fehler behoben: Die Beschreibung wurde schon gespeichert, a
 
 ## 13.11.26
 
+Ich habe eine Funktion zum Löschen einzelner Einträge und eine Durchschnittsberechnung eingebaut und das Programm mit verschiedenen Testfällen getestet. Dabei habe ich kleine Fehler behoben und ein Problem mit einer doppelten Datei in Visual Studio gelöst
+
 - [x] Ich baue eine Funktion ein, mit der man einen einzelnen Eintrag löschen kann. Man gibt die Nummer ein und die Einträge danach rutschen im Array nach vorne.
   
 - [x] Ich berechne den Durchschnitt von allen Beträgen und zeige ihn mit der Anzahl der Einträge an.
