@@ -63,10 +63,10 @@ Ich habe zwei kleine Fehler behoben: Die Beschreibung wurde schon gespeichert, a
 - [x] Ich teste die neuen Sachen mit verschiedenen Testfällen (z. B. eine Nummer, die es nicht gibt, oder den Durchschnitt bei einer leeren Liste) und behebe kleine Fehler.
 
 ## 20.11.26
-- [ ]Ich zähle, wie viele Einnahmen und wie viele Ausgaben in der Liste sind, und zeige beide Anzahlen an.
+- [ ] Ich zähle, wie viele Einnahmen und wie viele Ausgaben in der Liste sind, und zeige beide Anzahlen an.
   
-- [ ]Ich ändere den Filter so, dass der Benutzer den Mindestbetrag selbst eingibt und er nicht mehr fest auf 10 CHF steht. Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
+- [ ] Ich ändere den Filter so, dass der Benutzer den Mindestbetrag selbst eingibt und er nicht mehr fest auf 10 CHF steht. Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
   
-- [ ]Ich suche die grösste einzelne Ausgabe in der Liste und zeige sie mit ihrer Beschreibung an. Wenn es keine Ausgaben gibt, kommt eine Meldung.
+- [ ] Ich suche die grösste einzelne Ausgabe in der Liste und zeige sie mit ihrer Beschreibung an. Wenn es keine Ausgaben gibt, kommt eine Meldung.
   
-- [ ]Ich teste die neuen Funktionen mit verschiedenen Testfällen (z. B. nur Einnahmen in der Liste, ungültiger Mindestbetrag, leere Liste) und behebe kleine Fehler.
+- [ ] Ich teste die neuen Funktionen mit verschiedenen Testfällen (z. B. nur Einnahmen in der Liste, ungültiger Mindestbetrag, leere Liste) und behebe kleine Fehler.
