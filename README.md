@@ -58,9 +58,9 @@ Ich habe eine Funktion zum Löschen einzelner Einträge und eine Durchschnittsbe
   
 - [x] Ich berechne den Durchschnitt von allen Beträgen und zeige ihn mit der Anzahl der Einträge an.
   
-- [ ] Ich lasse den Benutzer die Budget-Grenze selbst eingeben und schreibe sie nicht mehr fest auf 100 CHF in den Code.
+- [x] Ich lasse den Benutzer die Budget-Grenze selbst eingeben und schreibe sie nicht mehr fest auf 100 CHF in den Code.
   
-- [ ] Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
+- [x] Ich prüfe auch, ob die Eingabe eine gültige Zahl ist.
   
 - [x] Ich teste die neuen Sachen mit verschiedenen Testfällen (z. B. eine Nummer, die es nicht gibt, oder den Durchschnitt bei einer leeren Liste) und behebe kleine Fehler.
 
